@@ -67,4 +67,4 @@ You can configure a variety of settings through R options and environment variab
 
 Learn more at <https://craneserver.net>
 
-**(c) Copyright Open Analytics NV, 2021-2022 - Apache License 2.0**
+**(c) Copyright Open Analytics NV, 2021-2025 - Apache License 2.0**
