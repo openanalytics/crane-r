@@ -1,0 +1,13 @@
+{{ if .Site.Params.pkgdocs }}
+  {{ if .Site.Params.pkgdocs.version }}
+<span class="td-footer__sitetool">
+  Site built with <a href="https://github.com/openanalytics/pkgdocs">pkgdocs</a> {{.Site.Params.pkgdocs.version}}
+</span>
+  {{ end }}
+{{ end }}
+{{ with .Site.Params.links -}}
+  |
+  {{ with index . "developer" -}}
+    {{- partial "footer/links.html"  . -}}
+  {{ end -}}
+{{ end -}}

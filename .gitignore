@@ -5,3 +5,8 @@
 /crane/man/*.Rd
 *.swp
 *.swo
+/docs/resources
+/docs/resources/*
+/docs/resources/_gen
+/docs/.hugo_build.lock
+/docs/public

@@ -1,0 +1,15 @@
+services:
+  hugo:
+    # image: klakegg/hugo:0.111.3-ext-alpine
+    image: floryn90/hugo:ext-alpine
+    ports:
+      - "1313:1313"
+    entrypoint: hugo
+    user: 1000:1000
+    command:
+      - server
+      - --baseURL=http://localhost
+      - --bind=0.0.0.0
+    volumes:
+      - ./docs:/src
+

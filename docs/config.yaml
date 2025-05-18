@@ -1,0 +1,18 @@
+theme: github.com/google/docsy
+contentDir: content
+params:
+  copyright: ''
+  offlineSearch: true
+  ui:
+    sidebar_menu_compact: true
+    ul_show: 1
+    sidebar_menu_foldable: true
+  github_repo: https://github.com/openanalytics/crane-r
+  github_subdir: docs
+  github_branch: main
+  pkgdocs:
+    version: 0.0.1.9000
+    authors: []
+ignoreFiles: \.pkgdocs_tmp_
+title: crane
+

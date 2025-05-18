@@ -1,0 +1,24 @@
+{{ if .Site.Params.pkgdocs }}
+  {{ with .Site.Params.pkgdocs.authors }}
+    {{ $len := (len .) }}
+    {{ range $index, $element := . }}
+      {{ with $element -}}
+        <span class="td-footer__authors">
+        {{- if .email -}}
+        <a target="_blank" rel="noopener" href="mailto:{{- .email -}}" aria-label="{{- .name -}}">
+        {{- .name -}}
+        </a>
+        {{- else -}}
+        {{- .name -}}
+        {{- end -}}
+        </span>
+      {{ end }}
+      {{ if ne (add $index 1) $len }}, {{end}}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with .Site.Params.links -}}
+  {{ with index . "user" -}}
+    {{- partial "footer/links.html"  . -}}
+  {{ end -}}
+{{ end -}}
